@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<div id = "content"></div>
+<div id = "wrapper"></div>
 </body>
 
 </html>

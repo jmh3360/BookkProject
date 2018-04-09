@@ -1,5 +1,13 @@
+/* CSS 장바구니 #div-monitor Start */
+.wrap-root{
+	border-bottom: 1px solid #eaeaea;
+}
+/* CSS 장바구니 #div-monitor End */
+.header .division{
+	border: 1px solid #eee;
+}
 .dropbtn {
-   background-color: #4CAF50;
+   background-color: #10b5cf;
    color: white;
    padding: 16px;
    font-size: 16px;
@@ -36,5 +44,5 @@
 }
 
 .dropdown:hover .dropbtn {
-   background-color: #3e8e41;
+   background-color: #10b5cf;
 }

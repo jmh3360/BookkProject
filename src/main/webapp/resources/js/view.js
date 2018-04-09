@@ -25,7 +25,7 @@ var createUl = x=>{
 	return '<ul id="ul-'+x.id+'" class="'+x.clazz+'"></ul>'
 }
 var createDiv = x=>{
-	return '<div id="div-'+x.id+'" class="'+x.clazz+'">'+x.val+'</div>'
+	return '<div id="div-'+x.id+'" class="'+x.clazz+'"></div>'
 }
 var createViewTr=x=>{
 	var tmep ='';
@@ -54,10 +54,10 @@ var createTable=x=>{
 	return tab ='<table id ="'+x.id+'" class = "'+x.clazz+'"></table>'
 }
 var createATag=x=>{
-	return '<a id ="'+x.id+'" href="'+x.link+'"> '+x.val+'</a>';
+	return '<a id ="a-'+x.id+'" href="'+x.link+'"> '+x.val+'</a>';
 }
 var createSpan=x=>{
-	return '<span id="'+x.id+'" class="glyphicon '+x.clazz+'"  aria-hidden="true">&nbsp'+x.val+'</span>';
+	return '<span id="span-'+x.id+'" class="'+x.clazz+'></span>';
 }
 var createHTag=x=>{
 	return '<h'+x.size+'>'+x.val+'</h'+x.size+'>';
