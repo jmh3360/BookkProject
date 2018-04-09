@@ -40,7 +40,7 @@ app.bookk = (()=>{
 			$(createATag({id:'cart',link:'#',val:'장바구니'})).appendTo('#div-member-bar')
 			.on('click',()=>{
 				
-				app.mall.cart(view);
+				app.mall.cart({view:view,context:context});
 			});
 			$('#div-member-bar').append(createSpan({id:'division',clazz:'division'}))
 			
@@ -78,13 +78,34 @@ app.bookk = (()=>{
 
 app.mall = {cart:x=>{
 	
-	$.getScript(x,()=>{
-		$('#div-body').append(createDiv({id:'monitor',clazz:''}));
-		$('#div-monitor').append(createDiv({id:'wrap-root',clazz:'wrap-root'}));
+	$.getScript(x.view,()=>{
+		
+		$('#div-content').remove();
+		$('#div-body').append(createDiv({id:'content',clazz:'container cart-div'}));
+		$('#div-content').html(createDiv({id:'wrap-root',clazz:'wrap-root'}));
 		
 		$('#div-wrap-root').append(createUl({id:'root',clazz:'list-inline root'}));
-		$('#ul-root').append(createMultiLi({
+		//아래의 서점은 동적으로 들어 가게끔 꾸며야 함
+		$('#ul-root').html(createMultiLi({
 			id:'root',arr:['HOME>','서점>','장바구니']}))
+			$('#div-content').append(createDiv({id:'cart-title',clazz:''}))
+			$.ajax({
+			url:x.context+'/cartcount/userid',
+			method:'POST',
+			data:JSON.stringify({userid:'장만호'}),
+			dataType:'json',
+			contentType:'application/json',
+			success:x=>{
+				
+				$('#div-cart-title').html(createHTag({size:'2',val:'장바구니'+x.count+'건'}))
+				$('#div-cart-title').attr('style','border-bottom:2px solid black; text-align: center')
+			},
+			error : (x,h,m)=>{
+				alert('검색 실패 x='+x+', h='+h+', m='+m);
+			}
+			})
+			
+			
 			
 		
 		

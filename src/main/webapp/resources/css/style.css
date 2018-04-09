@@ -2,6 +2,9 @@
 .wrap-root{
 	border-bottom: 1px solid #eaeaea;
 }
+.cart-div{
+	width: 1000px; margin: 0 auto; 
+}
 /* CSS 장바구니 #div-monitor End */
 .header .division{
 	border: 1px solid #eee;
