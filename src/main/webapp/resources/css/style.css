@@ -5,6 +5,20 @@
 .cart-div{
 	width: 1000px; margin: 0 auto; 
 }
+.table-cart {
+	width: 100%;
+	margin-top: 45px;
+	
+}
+.table-cart th{
+	
+	font-weight: normal;
+	font-size: 16px;
+	border-top: 2px solid #bbbbbb;
+	border-bottom: 2px solid #bbbbbb;
+	height: 60px;
+	
+}
 /* CSS 장바구니 #div-monitor End */
 .header .division{
 	border: 1px solid #eee;

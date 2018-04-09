@@ -1,6 +1,16 @@
 /**
  * 
  */
+var createTr = x=>{
+	return '<tr id ="'+x.id+'"></tr>'
+}
+var createTh = x=>{
+	var temp ='';
+	$.each(x.arr,(i,j)=>{
+		temp+='<th id="th-'+i+'" class="'+x.clazz+'"></th>'
+	});
+	return temp;
+}
 var createMultiATag = x=>{
 	var temp = '';
 	$.each(x.arr,(i,j)=>{
@@ -51,7 +61,7 @@ var createViewTd=x=>{
 	return temp;
 }
 var createTable=x=>{
-	return tab ='<table id ="'+x.id+'" class = "'+x.clazz+'"></table>'
+	return tab ='<table id ="table-'+x.id+'" class = "'+x.clazz+'"></table>'
 }
 var createATag=x=>{
 	return '<a id ="a-'+x.id+'" href="'+x.link+'"> '+x.val+'</a>';

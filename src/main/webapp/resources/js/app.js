@@ -99,6 +99,15 @@ app.mall = {cart:x=>{
 				
 				$('#div-cart-title').html(createHTag({size:'2',val:'장바구니'+x.count+'건'}))
 				$('#div-cart-title').attr('style','border-bottom:2px solid black; text-align: center')
+				$(createTable({id:'cart',clazz:'table-cart'})).appendTo('#div-content')
+				$(createTr({id:'tr-head'})).appendTo('#table-cart')
+				$(createTh({arr:['1','2','3','4'],clazz:''})).appendTo('#tr-head')
+				$('#th-0').html(createInput({id:'check-all',val:'',clazz:'',type:'checkbox'}))
+				$('#th-1').text('상품정보')
+				$('#th-2').text('상품금액')
+				$('#th-3').text('삭제')
+			
+				
 			},
 			error : (x,h,m)=>{
 				alert('검색 실패 x='+x+', h='+h+', m='+m);
