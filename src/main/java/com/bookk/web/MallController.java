@@ -36,4 +36,20 @@ public class MallController {
 		}.execute(param);
 		
 	}
+	@RequestMapping(value="/cartList/{userid}",
+			method=RequestMethod.GET,consumes="application/json")
+	public Object cartList(@PathVariable("userid")String userid,
+			@RequestBody HashMap<String, String> param) {
+		Map<String,Object> map = new HashMap<>();
+		Object o = new IGetService() {
+			
+			@Override
+			public Object execute(HashMap<?, ?> map) {
+				// TODO Auto-generated method stub
+				return mapper.mallCartList(map);
+			}
+		}.execute(param);
+		return o;
+		
+	}
 }

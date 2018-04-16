@@ -16,4 +16,5 @@
 	<select id="mallCartCount" resultType="map" parameterType="hashMap">
 	SELECT COUNT(*) AS count FROM CARTBASKET
 	</select>
+	<select id="mallCartList" resultMap="map" parameterType="hashMap"></select>
 </mapper>

@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface Mapper {
 	public HashMap<?, ?> mallCartCount(HashMap<?, ?> map);
+	public HashMap<?,?> mallCartList(HashMap<?, ?> map);
 }
