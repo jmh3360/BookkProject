@@ -35,7 +35,7 @@ var createUl = x=>{
 	return '<ul id="ul-'+x.id+'" class="'+x.clazz+'"></ul>'
 }
 var createDiv = x=>{
-	return '<div id="div-'+x.id+'" class="'+x.clazz+'"></div>'
+	return '<div id="'+x.id+'" class="'+x.clazz+'"></div>'
 }
 var createViewTr=x=>{
 	var tmep ='';
