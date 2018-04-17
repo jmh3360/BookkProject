@@ -147,6 +147,7 @@ shop.mall = {cart:x=>{
 		$('#div-delivery-price').append(createMultiDiv({id:'div-delivery-price',arr:['','']}));
 		$('#div-delivery-price').attr('font-weight','normal');
 		
+		
 		$('#div-delivery-price-0').append(createLabel({
 			fo:'',
 			val:createInput({
@@ -170,6 +171,7 @@ shop.mall = {cart:x=>{
 			} else {
 				alert('체크안되네?');
 				$('#span-td-1').text('5000');
+				$('input[id=input-checkbox-0]').attr('')
 			}
 		});
 				
