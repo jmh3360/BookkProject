@@ -1,4 +1,31 @@
 /* CSS 장바구니 #div-monitor Start */
+.table-cart-price{
+	width: 100%; margin-top: 70px;
+}
+.table-cart-price td{
+	text-align:center;
+	border-bottom: 2px solid #eee;
+	width: 33.33%;
+	font-size: 16px;
+	height: 120px;
+}
+.table-cart-price th{
+	text-align:center;
+	width:33.33%;
+	font-weight: normal;
+	font-size: 16px;
+	border-top: 2px solid #bbbbbb;
+	border-bottom: 2px solid #bbbbbb;
+	height: 60px;
+}
+#div-cart-footer-content-left{
+	float:left;
+	position: relative; margin-top: 4px;
+	padding-left: 20px; color: #ce6a52;
+}
+#div-cart-footer-content-right{
+	margin-right: 4px; float: right;
+}
 .wrap-root{
 	border-bottom: 1px solid #eaeaea;
 }
